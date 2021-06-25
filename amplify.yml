@@ -10,9 +10,8 @@ applications:
         build:
           commands:
             - npx nx run shell:build:production
-            - cd apps/shell
       artifacts:
-        baseDirectory: ../../dist/apps/shell
+        baseDirectory: dist
         files:
           - '**/*'
       cache:
@@ -31,7 +30,7 @@ applications:
             - npx nx run business:build:production
             - cd apps/business
       artifacts:
-        baseDirectory: ../../dist/apps/business
+        baseDirectory: dist
         files:
           - '**/*'
       cache:
@@ -50,7 +49,7 @@ applications:
             - npx nx run personel:build:production
             - cd apps/personel
       artifacts:
-        baseDirectory: ../../dist/apps/personel
+        baseDirectory: dist
         files:
           - '**/*'
       cache:
