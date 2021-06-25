@@ -5,7 +5,7 @@ applications:
         preBuild:
           commands:
             - git config --local core.ignorecase false
-            - cd ../..
+            #- cd ../..
             - npm install
         build:
           commands:
@@ -23,12 +23,11 @@ applications:
         preBuild:
           commands:
             - git config --local core.ignorecase false
-            - cd ../..
+            #- cd ../..
             - npm install
         build:
           commands:
             - npx nx run business:build:production
-            - cd apps/business
       artifacts:
         baseDirectory: dist
         files:
@@ -42,12 +41,11 @@ applications:
         preBuild:
           commands:
             - git config --local core.ignorecase false
-            - cd ../..
+            #- cd ../..
             - npm install --save
         build:
           commands:
             - npx nx run personel:build:production
-            - cd apps/personel
       artifacts:
         baseDirectory: dist
         files:
