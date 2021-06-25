@@ -1,0 +1,40 @@
+<ion-content style="background-color: solid cornflowerblue;" [fullscreen]="true">
+
+    <ion-card style="margin-top: 40%;box-shadow: none !important;">
+        <ion-card-header>
+            <ion-title style="font-weight: bolder; font-size:xx-large; text-align: center; color: primary;">
+                CongoPay
+            </ion-title>
+            <ion-card-subtitle style="text-align: center; margin-top: 18px;"> Welcome to CongoPay, make your first step
+                and access your
+                account.
+            </ion-card-subtitle>
+            <div style="margin-top: 10%;">
+                <!-- Number type input -->
+                <ion-label>Email</ion-label>
+                <ion-input style="border: 1px solid gray; " type="email"></ion-input>
+                <!-- Number type input -->
+                <div style="margin-top: 8px;">
+                    <ion-label>Passwoed</ion-label>
+                    <ion-input style="border: 1px solid gray;" type="password"></ion-input>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <ion-button (click)="onSubmit()" expand="block">Login</ion-button>
+                </div>
+                <div>
+                    <p>
+                        Don't have an Account
+                        <a style="color: mediumblue;">
+                            Sign Up
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+        </ion-card-header>
+    </ion-card>
+
+</ion-content>

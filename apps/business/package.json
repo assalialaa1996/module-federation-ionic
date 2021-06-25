@@ -1,0 +1,6 @@
+{
+  "name": "business",
+  "devDependencies": {
+    "@capacitor/cli": "2.4.2"
+  }
+}

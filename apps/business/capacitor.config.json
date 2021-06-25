@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "business",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "../../dist/apps/business",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
