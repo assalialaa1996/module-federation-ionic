@@ -1,0 +1,59 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - git config --local core.ignorecase false
+            - cd ../..
+            - npm install
+        build:
+          commands:
+            - npx nx run shell:build:production
+            - cd apps/shell
+      artifacts:
+        baseDirectory: ../../dist/apps/shell
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: apps/shell
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - git config --local core.ignorecase false
+            - cd ../..
+            - npm install
+        build:
+          commands:
+            - npx nx run business:build:production
+            - cd apps/business
+      artifacts:
+        baseDirectory: ../../dist/apps/business
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: apps/business
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - git config --local core.ignorecase false
+            - cd ../..
+            - npm install --save
+        build:
+          commands:
+            - npx nx run personel:build:production
+            - cd apps/personel
+      artifacts:
+        baseDirectory: ../../dist/apps/personel
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: apps/personel

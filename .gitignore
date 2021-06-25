@@ -4,7 +4,7 @@
 /dist
 /tmp
 s/out-tsc
-amplify.yml
+#amplify.yml
 
 # dependencies
 /node_modules
