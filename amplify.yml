@@ -7,7 +7,7 @@ applications:
             - git config --local core.ignorecase false
             - cd ../..
             - npm install
-            - ls -l "where I'am shell ?"
+            - ls -l
             - npx nx run shell:build:production
       artifacts:
         baseDirectory: dist/apps/shell
@@ -24,7 +24,7 @@ applications:
             - git config --local core.ignorecase false
             - cd ../..
             - npm install
-            - ls -l "where I'am business ?"
+            - ls -l
             - npx nx run business:build:production
       artifacts:
         baseDirectory: dist/apps/business
@@ -41,7 +41,7 @@ applications:
             - git config --local core.ignorecase false
             - cd ../..
             - npm install --save
-            - ls -l "where I'am personel?"
+            - ls -l
             - npx nx run personel:build:production
       artifacts:
         baseDirectory: dist/apps/personel
